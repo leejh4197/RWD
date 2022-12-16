@@ -1,4 +1,7 @@
 .box{
   background-color: yellow;
   margin: 100px;
+  width: 100%;
 }
+
+/* 마진 값은 width에 포함이 된다. */
