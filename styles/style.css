@@ -98,32 +98,76 @@ input[type="search"] {
   padding: var(--spacing-base) var(--spacing-lg);
   gap: var(--spacing-base);
 }
+/* 공통 메인 콘텐츠 섹션 제목 */
+[class*="__title"] {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  margin-bottom: var(--spacing-base);
+}
+
+[class*="__koTitle"] {
+  color: black;
+  font-size: var(--text-md);
+  font-weight: 700;
+}
+.sprite {
+  color: black;
+  height: 3.75rem;
+  padding-left: 4rem;
+  background: url(/images/sprite_main.png) no-repeat;
+}
+.spriteNews {
+  background-position: 0 -230px;
+}
+.spriteBook {
+  background-position: 0 0;
+}
+.spriteTwitter {
+  background-position: 0% -460px;
+}
+.spriteFavorite {
+  background-position: 0% -345px;
+}
+.spriteBoard {
+  background-position: 0% -115px;
+}
+
+.accentBook {
+  color: var(--green);
+}
+.accentNews {
+  color: var(--yellow);
+}
+.accentBoard {
+  color: var(--brown);
+}
+.accentFavorite {
+  color: var(--orange);
+}
+.accentTwitter {
+  color: var(--blue);
+}
+
 /* 공통 추천 서적 */
-.book{
-  background-color: lightgreen;
+.book {
   grid-area: book;
 }
 /* 공통 새소식 */
-.news{
-  background-color: yellow;
+.news {
   grid-area: news;
 }
 /* 공통 게시판 */
-.board{
-  background-color: salmon;
+.board {
   grid-area: board;
 }
 /* 공통 인기 사이트 */
-.favorite{
-  background-color: aqua;
+.favorite {
   grid-area: favorite;
-
 }
 /* 공통 추천 서적 */
-.twitter{
-  background-color: coral;
+.twitter {
   grid-area: twitter;
-
 }
 
 /* 모바일 디바이스 (Mobile Device) */
@@ -231,14 +275,15 @@ input[type="search"] {
   }
 
   /* 모바일 메인 콘텐츠 */
-  .appMain{
+  .appMain {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "book"
-                         "news"
-                         "board"
-                         "favorite"
-                         "twitter";
+    grid-template-areas:
+      "book"
+      "news"
+      "board"
+      "favorite"
+      "twitter";
   }
 }
 
@@ -297,16 +342,16 @@ input[type="search"] {
     text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
   }
   /* 데스크탑 메인 콘텐츠 */
-  .appMain{
+  .appMain {
     max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid red;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
-    grid-template-areas: "news news news news news news news news news news news news"
-                         "book book book book twitter twitter twitter twitter twitter favorite favorite favorite"
-                         "book book book book . board board board board board board board";
+    grid-template-areas:
+      "news news news news news news news news news news news news"
+      "book book book book twitter twitter twitter twitter twitter favorite favorite favorite"
+      "book book book book . board board board board board board board";
   }
 }
 
