@@ -7,7 +7,8 @@
 /* 모든 디바이스 (All Device) */
 
 /* 공통 아이콘 (Font Awesome) */
-.far, .fas {
+.far,
+.fas {
   margin-right: var(--spacing-xs);
 }
 
@@ -202,7 +203,56 @@ input[type="search"] {
 /* 공통 게시판 */
 .board {
   grid-area: board;
+  display: flex;
+  flex-flow: row wrap;
 }
+
+.board__title {
+  flex: 1 1 auto;
+}
+.board__list {
+  order: 1;
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--spacing-sm);
+}
+.board__item {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.board__link {
+  flex: 1 1 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.board__date {
+  flex: 0 0 auto;
+}
+.board__more {
+  padding-top: var(--spacing-sm);
+}
+
+/* .board {
+  grid-area: board;
+  position: relative;
+}
+.board__item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-xs);
+}
+.board__link {
+  flex-grow: 1;
+}
+.board__more {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 10px;
+} */
+
 /* 공통 인기 사이트 */
 .favorite {
   grid-area: favorite;
