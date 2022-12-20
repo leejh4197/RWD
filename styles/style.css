@@ -153,6 +153,31 @@ input[type="search"] {
 .book {
   grid-area: book;
 }
+.book__cover {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.book__info {
+  background-color: lightseagreen;
+  text-align: center;
+  margin-top: var(--spacing-base);
+}
+.book__info * {
+  display: inline;
+}
+.ratingStar {
+  display: block;
+  font-size: var(--text-xl);
+}
+
+.book__coverCaption {
+  margin-top: var(--spacing-sm);
+  line-height: 1.6;
+}
+
 /* 공통 새소식 */
 .news {
   grid-area: news;
